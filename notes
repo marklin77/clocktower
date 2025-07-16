@@ -1,0 +1,29 @@
+git submodule
+-------------
+
+adding submodule:
+
+  git submodule add https://github.com/my-org/my-library components/my-library
+  git commit -m "Add my-library as a submodule"
+
+clone submodule:
+
+  git clone --recurse-submodules <repository_url>     // Clone repo with it submodule
+  git submodule update --init --recursive             // Update current repo with its submodule
+
+Update submodule:
+
+  <use your submoudle like any other repo>
+  git add <submodule>                                     // Do this at your repo level
+  git commit -m "Update my-library submodule to latest"
+
+Add Git into current directory
+------------------------------  
+
+  cd /path/to/my_existing_project
+  git init
+  git add .
+  git commit -m "Initial commit of existing local files"
+  git remote add origin https://github.com/user/repo.git
+  git fetch origin
+  git checkout <branch>
