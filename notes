@@ -10,7 +10,7 @@ clone submodule:
 
   git clone --recurse-submodules <repository_url>     // Clone repo with it submodule
   git submodule update --init --recursive             // Update current repo with its submodule
-
+  git submoudle update --remote
 Update submodule:
 
   <use your submoudle like any other repo>
