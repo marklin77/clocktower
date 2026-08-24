@@ -1,0 +1,62 @@
+{
+    "workbench.activityBar.location": "hidden",
+    "workbench.editor.showTabs": "single",
+    "workbench.startupEditor": "none",
+    "workbench.tips.enabled": false,
+    "editor.minimap.enabled": false,
+    "breadcrumbs.showKeys": false,
+    "workbench.tree.enableStickyScroll": true,
+    "workbench.tree.indent": 8,
+    "explorer.compactFolders": false,
+    "explorer.confirmDragAndDrop": false,
+    "explorer.confirmDelete": false,
+    "editor.colorDecorators": false,
+    "editor.codeLens": false,
+    "editor.parameterHints.enabled": true,
+    "editor.hover.enabled": "on",
+    "editor.lightbulb.enabled": "off",
+    "files.trimTrailingWhitespace": true,
+    "editor.tabSize": 3,
+    "editor.detectIndentation": false,
+    "editor.guides.indentation": false,
+    "editor.quickSuggestions": { "other": "off" },
+    // "workbench.iconTheme": "",
+    "extensions.experimental.affinity": { "asvetliakov.vscode-neovim": 1 },
+    "editor.suggestOnTriggerCharacters": false,
+    "editor.tabCompletion": "on",
+    "editor.snippetSuggestions": "bottom",
+    "emmet.triggerExpansionOnTab": true,
+    "editor.inlineSuggest.enabled": false,
+    "custom-ui-style.stylesheet":
+      {
+         ".quick-input-widget": "top: 25vh !important",
+      },
+      "workbench.secondarySideBar.defaultVisibility": "hidden",
+      "chat.viewSessions.orientation": "stacked",
+      "files.simpleDialog.enable": true,
+      "terminal.integrated.commandsToSkipShell": [
+         "matlab.interrupt"
+      ],
+}
+// {
+//   "[systemverilog]": {
+//     "editor.quickSuggestions": {
+//       "other": true,
+//       "comments": false,
+//       "strings": false
+//     },
+//     "editor.suggest.snippetsPreventQuickSuggestions": true,
+//     "editor.snippetSuggestions": "none",
+//     "editor.inlineSuggest.enabled": false,
+//     "editor.suggestOnTriggerCharacters": false,
+//     "editor.parameterHints.enabled": false
+//   },
+//   "github.copilot.enable": {
+//     "*": true,
+//     "systemverilog": false
+// },
+// "editor.minimap.enabled": false,
+// "extensions.experimental.affinity": {
+//   "asvetliakov.vscode-neovim": 1
+// }
+// }
