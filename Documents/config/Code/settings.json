@@ -32,11 +32,12 @@
          ".quick-input-widget": "top: 25vh !important",
       },
       "workbench.secondarySideBar.defaultVisibility": "hidden",
-      "chat.viewSessions.orientation": "stacked",
       "files.simpleDialog.enable": true,
       "terminal.integrated.commandsToSkipShell": [
          "matlab.interrupt"
       ],
+      "chat.viewSessions.orientation": "stacked",
+      "terminal.integrated.initialHint": false,
 }
 // {
 //   "[systemverilog]": {
