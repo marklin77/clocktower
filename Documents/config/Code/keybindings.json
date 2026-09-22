@@ -5,8 +5,8 @@
    { "key": "ctrl+k ctrl+p", "command": "workbench.action.showCommands" },          { "key": "shift+cmd+p", "command": "-workbench.action.showCommands" },
    // { "key": "ctrl+k ctrl+n", "command": "workbench.action.files.newUntitledFile"},
    { "key": "ctrl+k ctrl+n", "command": "workbench.action.files.openFile"},
-   { "key": "ctrl+k ctrl+[", "command": "workbench.action.previousEditorInGroup"},
-   { "key": "ctrl+k ctrl+]", "command": "workbench.action.nextEditorInGroup" },
+   { "key": "ctrl+[",        "command": "workbench.action.previousEditorInGroup"},
+   { "key": "ctrl+]",        "command": "workbench.action.nextEditorInGroup" },
    { "key": "ctrl+k ctrl+g", "command": "simpleBrowser.show"},
    { "key": "ctrl+k ctrl+i", "command": "workbench.action.chat.toggle"},
    { "key": "ctrl+k ctrl+,", "command": "workbench.action.showAllEditors"},
@@ -22,6 +22,8 @@
    { "key": "ctrl+w ctrl+k",  "command": "workbench.action.navigateUp" },
    { "key": "ctrl+w ctrl+w",  "command": "workbench.action.joinTwoGroups"},
 
+   { "key": "ctrl+m ctrl+c",  "command": "matlab.openCommandWindow", "when": "editorLangId == matlab"},
+   
    { "key": "space w v", "command": "workbench.action.splitEditor", "when": "neovim.mode == 'normal' && (editorTextFocus || !inputFocus)" },
    { "key": "space w s", "command": "workbench.action.splitEditorDown", "when": "neovim.mode == 'normal' && (editorTextFocus || !inputFocus)" },
    { "key": "space w h", "command": "workbench.action.navigateLeft", "when": "neovim.mode == 'normal' && (editorTextFocus || !inputFocus)" },
@@ -31,13 +33,18 @@
    { "key": "space w w", "command": "workbench.action.joinTwoGroups", "when": "neovim.mode == 'normal' && (editorTextFocus || !inputFocus)" },
    { "key": "space w [", "command": "workbench.action.previousEditorInGroup", "when": "neovim.mode == 'normal' && (editorTextFocus || !inputFocus)" },
    { "key": "space w ]", "command": "workbench.action.nextEditorInGroup", "when": "neovim.mode == 'normal' && (editorTextFocus || !inputFocus)" },
-   { "key": "space b b", "command": "workbench.action.toggleSidebarVisibility", "when": "neovim.mode == 'normal' && (editorTextFocus || !inputFocus)" },
+   { "key": "space w b", "command": "workbench.action.toggleSidebarVisibility", "when": "neovim.mode == 'normal' && (editorTextFocus || !inputFocus)" },
 
+   { "key": "space m c", "command": "matlab.openCommandWindow", "when": "neovim.mode == 'normal' && (editorTextFocus || !inputFocus)" },
+   
    { "key": "space g", "command": "simpleBrowser.show", "when": "neovim.mode == 'normal' && (editorTextFocus || !inputFocus)" },
    { "key": "space i", "command": "workbench.action.chat.toggle", "when": "neovim.mode == 'normal' && (editorTextFocus || !inputFocus)" },
    { "key": "space ,", "command": "workbench.action.showAllEditors", "when": "neovim.mode == 'normal' && (editorTextFocus || !inputFocus)" },
 
-   // Explore
-   { "key": "A", "command": "workbench.action.addRootFolder",    "when": "explorerViewletFocus && !inputFocus"},
-   { "key": "R", "command": "workbench.action.removeRootFolder", "when": "explorerViewletFocus && !inputFocus"},
+   { "key": "ctrl+\\", "command": "editor.action.showHover",               "when": "editorLangId == systemverilog"},
+   {
+      "key": "ctrl+shift+\\",
+      "command": "editor.action.referenceSearch.trigger",
+      "when": "editorLangId == systemverilog"
+   }
 ]
