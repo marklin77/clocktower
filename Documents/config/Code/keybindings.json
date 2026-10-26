@@ -6,9 +6,8 @@
    { "key": "ctrl+,",  "command": "workbench.action.decreaseViewHeight"},
    { "key": "ctrl+.",  "command": "workbench.action.increaseViewHeight"},
    
-   { "key": "ctrl+b o", "command": "workbench.action.quickOpen" },             { "key": "cmd+p", "command": "-workbench.action.quickOpen" },
+   { "key": "ctrl+b o", "command": "workbench.action.files.newUntitledFile" },
    { "key": "ctrl+b shift+k", "command": "workbench.action.openGlobalKeybindings" }, { "key": "cmd+k cmd+s", "command": "-workbench.action.openGlobalKeybindings" },
-   { "key": "ctrl+b n", "command": "workbench.action.files.openFile"},
    { "key": "ctrl+b g", "command": "simpleBrowser.show"},
    { "key": "ctrl+b i", "command": "workbench.action.chat.toggle"},
       { "key": "escape", "command": "workbench.action.chat.toggle", "when": "inChat"},
@@ -22,10 +21,10 @@
       { "key": "escape",   "command": "workbench.action.toggleSidebarVisibility", "when": "sideBarFocus && activeViewlet == 'workbench.view.extensions'" },
    { "key": "ctrl+b p", "command": "workbench.action.showCommands" },   { "key": "shift+cmd+p", "command": "-workbench.action.showCommands" },
    { "key": "ctrl+b e", "command": "workbench.view.explorer" },
-      { "key": "ctrl+b e", "command": "workbench.action.closeSidebar",       "when": "explorerViewletFocus"},
-      { "key": "escape",   "command": "workbench.action.closeSidebar",       "when": "explorerViewletFocus"},
-      { "key": "space e", "command": "workbench.action.closeSidebar",  "when": "explorerViewletFocus"},
-      { "key": "shift+a",  "command": "workbench.action.addRootFolder", "when": "explorerViewletFocus"},
+      { "key": "ctrl+b e", "command": "workbench.action.closeSidebar",            "when": "explorerViewletFocus"},
+      { "key": "escape",   "command": "workbench.action.closeSidebar",            "when": "explorerViewletFocus"},
+      { "key": "space e",  "command": "workbench.action.closeSidebar",            "when": "explorerViewletFocus"},
+      { "key": "shift+a",  "command": "workbench.action.addRootFolder",           "when": "explorerViewletFocus"},
    { "key": "ctrl+b v",  "command": "workbench.action.splitEditor"},
    { "key": "ctrl+b s",  "command": "workbench.action.splitEditorDown"},
    { "key": "ctrl+b h",  "command": "workbench.action.navigateLeft" },
@@ -33,17 +32,22 @@
    { "key": "ctrl+b j",  "command": "workbench.action.navigateDown" },
    { "key": "ctrl+b k",  "command": "workbench.action.navigateUp" },
    { "key": "ctrl+b w",  "command": "workbench.action.closeActiveEditor"},
-   
 
    { "key": "ctrl+m ctrl+c",  "command": "matlab.openCommandWindow", "when": "editorLangId == matlab"},
    
-   { "key": "space e",         "command": "workbench.view.explorer", "when": "neovim.mode == 'normal' && (editorTextFocus || !inputFocus)"},
-      { "key": "space e",      "command": "workbench.action.closeSidebar",  "when": "neovim.mode == 'normal' && (editorTextFocus || !inputFocus) && explorerViewletVisible"},
+   { "key": "space e",   "command": "workbench.view.explorer", "when": "neovim.mode == 'normal' && (editorTextFocus || !inputFocus)"},
+      { "key": "space e", "command": "workbench.action.closeSidebar",  "when": "neovim.mode == 'normal' && (editorTextFocus || !inputFocus) && explorerViewletVisible"},
+   { "key": "space x",   "command": "workbench.view.extensions", "when": "neovim.mode == 'normal' && (editorTextFocus || !inputFocus)"},
+      { "key": "space x", "command": "workbench.action.toggleSidebarVisibility",  "when": "neovim.mode == 'normal' && (editorTextFocus || !inputFocus) && activeViewlet == 'workbench.view.extensions'"},
    { "key": "space g",         "command": "simpleBrowser.show", "when": "neovim.mode == 'normal' && (editorTextFocus || !inputFocus)" },
+   { "key": "space n",         "command": "workbench.action.files.newUntitledFile", "when": "neovim.mode == 'normal' && (editorTextFocus || !inputFocus)"},   
    { "key": "space i",         "command": "workbench.action.chat.toggle", "when": "neovim.mode == 'normal' && (editorTextFocus || !inputFocus)" },
    { "key": "space ,",         "command": "workbench.action.showAllEditors", "when": "neovim.mode == 'normal' && (editorTextFocus || !inputFocus)" },
+   { "key": "space p",         "command": "workbench.action.showCommands", "when": "neovim.mode == 'normal' && (editorTextFocus || !inputFocus)"},   
+      { "key": "shift+cmd+p", "command": "-workbench.action.showCommands", "when": "neovim.mode == 'normal' && (editorTextFocus || !inputFocus)"},
    
    { "key": "space w v",       "command": "workbench.action.splitEditor", "when": "neovim.mode == 'normal' && (editorTextFocus || !inputFocus)" },
+   { "key": "space w shift+v", "command": "livePreview.start.internalPreview.atFile", "when": "neovim.mode == 'normal' && (editorTextFocus || !inputFocus)" },
    { "key": "space w s",       "command": "workbench.action.splitEditorDown", "when": "neovim.mode == 'normal' && (editorTextFocus || !inputFocus)" },
    { "key": "space w h",       "command": "workbench.action.navigateLeft", "when": "neovim.mode == 'normal' && (editorTextFocus || !inputFocus)" },
    { "key": "space w l",       "command": "workbench.action.navigateRight", "when": "neovim.mode == 'normal' && (editorTextFocus || !inputFocus)" },
@@ -52,11 +56,13 @@
    { "key": "space w w",       "command": "workbench.action.closeActiveEditor", "when": "neovim.mode == 'normal' && (editorTextFocus || !inputFocus)" },
    { "key": "space w [",       "command": "workbench.action.previousEditorInGroup", "when": "neovim.mode == 'normal' && (editorTextFocus || !inputFocus)" },
    { "key": "space w ]",       "command": "workbench.action.nextEditorInGroup", "when": "neovim.mode == 'normal' && (editorTextFocus || !inputFocus)" },
+   
    { "key": "space b ,",       "command": "workbench.action.showAllEditors", "when":"neovim.mode == 'normal' && (editorTextFocus||!inputFocus)"},
+   
    { "key": "space f f",       "command": "filesExplorer.findInWorkspace", "when":"neovim.mode == 'normal' && (editorTextFocus||!inputFocus)"},
 
    { "key": "space m c", "command": "matlab.openCommandWindow", "when": "neovim.mode == 'normal' && (editorTextFocus || !inputFocus)" },
    
    { "key": "ctrl+\\", "command": "editor.action.showHover",               "when": "editorLangId == systemverilog"},
-   { "key": "ctrl+shift+\\", "command": "editor.action.referenceSearch.trigger", "when": "editorLangId == systemverilog" },
+   { "key": "ctrl+shift+\\", "command": "editor.action.referenceSearch.trigger", "when": "editorLangId == systemverilog" }
 ]

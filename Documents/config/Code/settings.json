@@ -31,7 +31,6 @@
       {
          ".quick-input-widget": "top: 25vh !important",
     },
-    "workbench.colorTheme": "Tokyo Night",
     "workbench.colorCustomizations": {"focusBorder"            : "#ff8800", 
                                       "panel.border"           : "#555555", 
                                       "panelTitle.activeBorder": "#ff8800",
@@ -41,5 +40,11 @@
                                       "panelTitle.border"      : "#ff8800"},
     "terminal.integrated.commandsToSkipShell": [
         "matlab.interrupt"
-    ]
+    ],
+    "livePreview.notifyOnOpenLooseFile": false,
+    "chat.viewSessions.orientation": "stacked",
+    "claudeCode.preferredLocation": "panel",
+    "workbench.colorTheme": "Best Themes - Gruvbox Concoctis Dark",
+    "align.by.regex.templates": {},
+    "extensions.ignoreRecommendations": true
 }
